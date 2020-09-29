@@ -1,17 +1,19 @@
-package Employee;
+package Employee.Controller;
 
 import java.sql.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import Employee.Model.*;
+import Employee.View.*;
 
-class Remove_Employee implements ActionListener{
+public class Remove_Employee implements ActionListener{
     JFrame f;
     JTextField t;
     JLabel l1,l2,l3,l4,l5,l6,l7,l8;
     JButton b,b1,b2,b3;
 
-    Remove_Employee(){
+    public Remove_Employee(){
         f=new JFrame("Remove Employee");
         f.setBackground(Color.green);   
         f.setLayout(null);
@@ -169,6 +171,10 @@ class Remove_Employee implements ActionListener{
             details d=new details();
         }
     }
+    public int bct(int a){
+        return a+56;
+    }
+
 
     public static void main(String[]ar){
         new Remove_Employee();

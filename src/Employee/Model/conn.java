@@ -1,6 +1,8 @@
-package Employee;
+package Employee.Model;
 
 import java.sql.*;
+import Employee.View.*;
+import Employee.Controller.*;
 
 public class conn{
     

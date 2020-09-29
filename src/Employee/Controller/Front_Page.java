@@ -1,16 +1,18 @@
-package Employee;
+package Employee.Controller;
 
 import java.awt.*;
 import javax.swing.*;
 import java.lang.Thread;
 import java.awt.event.*;
+import Employee.Model.*;
+import Employee.View.*;
 
-class Front_Page implements ActionListener{
+public class Front_Page implements ActionListener{
     JFrame f; 
     JLabel id,l1;
     JButton b;
 
-    Front_Page(){
+    public Front_Page(){
  
         f=new JFrame("Employee Management System");
         f.setBackground(Color.red);
@@ -73,6 +75,12 @@ class Front_Page implements ActionListener{
             f.setVisible(false);
             new login();    
         }
+    }
+    public int act(int a){
+        return a+45;
+    }
+    public int bct(int a){
+        return a+56;
     }
 
     public static void main(String[] arg){

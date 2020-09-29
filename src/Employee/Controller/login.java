@@ -1,11 +1,13 @@
-package Employee;
+package Employee.Controller;
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.sql.*;
+import Employee.Model.*;
+import Employee.View.*;
 
-class login  implements ActionListener{
+public class login  implements ActionListener{
 
     JFrame f;
     JLabel l1,l2;
@@ -13,7 +15,7 @@ class login  implements ActionListener{
     JPasswordField t2;
     JButton b1,b2;
 
-    login(){
+    public login(){
 
         f=new JFrame("Login");
 

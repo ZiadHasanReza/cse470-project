@@ -1,16 +1,18 @@
-package Employee;
+package Employee.Controller;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import Employee.Model.*;
+import Employee.View.*;
 
-class Search_Employee implements ActionListener{
+public class Search_Employee implements ActionListener{
     JFrame f;
     JTextField t;
     JLabel l,l5;
     JButton b,b2;
 
-    Search_Employee(){
+    public Search_Employee(){
         f=new JFrame("search");
         f.setBackground(Color.green);
         f.setLayout(null);
@@ -62,7 +64,12 @@ class Search_Employee implements ActionListener{
         }
 
     }
-    
+    public boolean bct(int a){
+        if (a == 0){ 
+            return false;
+        }
+        else return true;
+    }
     public static void main(String[]ar){
         new Search_Employee();
     } 	

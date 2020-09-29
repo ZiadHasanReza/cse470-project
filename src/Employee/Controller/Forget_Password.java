@@ -1,19 +1,21 @@
 
-package Employee;
+package Employee.Controller;
 
 import java.sql.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import Employee.Model.*;
+import Employee.View.*;
 
-class Forget_Password implements ActionListener
+public class Forget_Password implements ActionListener
 {
 JFrame f;
 JTextField t,t2,t3;
 JLabel l,l1,l2,l3,l4,l5;
 JButton b,b1,b2;
 
-Forget_Password()
+public Forget_Password()
 {
 f=new JFrame("Forget");
 

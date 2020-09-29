@@ -1,17 +1,19 @@
-package Employee;
+package Employee.Controller;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import Employee.Model.*;
+import Employee.View.*;
 
-class View_Employee implements ActionListener{
+ public class View_Employee implements ActionListener{
 
     JFrame f;
     JTextField t;
     JLabel l1,l2;
     JButton b,b2;
 
-    View_Employee(){
+    public View_Employee(){
         f=new JFrame("View");
         f.setBackground(Color.green);
         f.setLayout(null);
@@ -63,6 +65,12 @@ class View_Employee implements ActionListener{
             Print_Data p=new Print_Data(t.getText());
         }
 
+    }
+    public boolean bct(int a){
+        if (a == 0){ 
+            return false;
+        }
+        else return true;
     }
 
     public static void main(String[]ar){

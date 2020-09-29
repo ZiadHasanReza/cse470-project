@@ -1,16 +1,18 @@
-package Employee;
+package Employee.Model;
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import Employee.View.*;
+import Employee.Controller.*;
 
-class details  implements ActionListener{
+public class details  implements ActionListener{
 
-    JFrame f;
+    public JFrame f;
     JLabel l1,l2;
     JButton b1,b2,b3,b4;
 
-    details(){
+    public details(){
         f=new JFrame("Employee Detail");
         f.setBackground(Color.white);
         f.setLayout(null);

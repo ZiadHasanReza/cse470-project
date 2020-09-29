@@ -1,11 +1,13 @@
-package Employee;
+package Employee.Controller;
 
 import java.awt.*;
 import java.sql.*;
 import javax.swing.*;
 import java.awt.event.*;
+import Employee.Model.*;
+import Employee.View.*;
 
-class Update_Employee extends Add_Employee implements ActionListener{
+public class Update_Employee extends Add_Employee implements ActionListener{
 
     JFrame f;
     JLabel id,id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12,id15,lab,lab1;
@@ -13,7 +15,7 @@ class Update_Employee extends Add_Employee implements ActionListener{
     JButton b,b1,b2,b3; 
     String id_emp;
 
-    Update_Employee(String idaa){
+    public Update_Employee(String idaa){
         super(0);
         f=new JFrame("update Employee details");
         f.setVisible(true);
@@ -183,6 +185,12 @@ class Update_Employee extends Add_Employee implements ActionListener{
             f.setVisible(false);
             details d=new details();
         }
+    }
+    public boolean bct(int a){
+        if (a == 0){ 
+            return false;
+        }
+        else return true;
     }
 
     public static void main(String[] arg){

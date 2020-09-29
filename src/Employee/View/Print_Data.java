@@ -1,18 +1,20 @@
-package Employee;
+package Employee.View;
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.sql.*;
+import Employee.Model.*;
+import Employee.Controller.*;
 
-class Print_Data implements ActionListener{
+public class Print_Data implements ActionListener{
     JFrame f;
     JLabel id8,id,aid,id1,aid1,id2,aid2,id3,aid3,id4,aid4,id5,aid5,id6,aid6,id7,aid7,id9,id10,id11,id12,id13,id14,id15,id16,id17,lab;
     String emp_id,name,father,address,phone,email,education,post,age,dob,aadhar;
     JButton b1,b2;
     ImageIcon icon;
 
-    Print_Data(String e_id){
+    public Print_Data(String e_id){
         try{
             conn con = new conn();
             String str = "select * from employee where emp_id = '"+e_id+"'";

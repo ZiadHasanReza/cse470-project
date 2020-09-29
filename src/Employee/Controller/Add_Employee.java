@@ -1,21 +1,24 @@
-package Employee;
+package Employee.Controller;
 
 import java.sql.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
+import Employee.Model.*;
+import Employee.View.*;
 
-class Add_Employee implements ActionListener{
+
+public class Add_Employee implements ActionListener{
 
     JFrame f;
     JLabel id,id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12,id15,id16,id17,lab,lab1;
     JTextField t,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13;
     JButton b,b1,b2,b3;
 
-    Add_Employee(int i){}
+    public Add_Employee(int i){}
     
-    Add_Employee(){
+    public Add_Employee(){
         f = new JFrame("Add Employee");
         f.setBackground(Color.white);
         f.setLayout(null);
@@ -186,7 +189,7 @@ class Add_Employee implements ActionListener{
                 cc.s.executeUpdate(q);
                 JOptionPane.showMessageDialog(null,"Details Successfully Inserted");
                 f.setVisible(false);
-                new details();
+                new Employee.Model.details();
             }catch(Exception ee){
                 System.out.println("The error is:"+ee);
             }
@@ -194,6 +197,9 @@ class Add_Employee implements ActionListener{
             f.setVisible(false);
             new details();
         }
+    }
+    public int act(int a){
+        return a+45;
     }
     public static void main(String[ ] arg){
         new Add_Employee();
